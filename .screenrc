@@ -1,0 +1,58 @@
+multiuser on
+autodetatch on
+
+defscrollback 10000
+
+hardstatus alwayslastline
+hardstatus string "%{=b wK}[%c:%s]%{= wK}%14=%-w%{=b bR} %n*%f %t %{-} %+w%=%{= dd}"
+
+# %{= wK} : Set text to Bold Black over White
+# [%c:%s] : Display time as 24 HH:MM:SS inside brackets
+# %{= wK} : Set text to Black over White
+# %14=    : Set a 14% Padding
+# %-w     : Show prior window numbers and names
+# %{=b bR}: Sets text to Bold Red over Blue
+#  : Space character
+# %n*     : Show current window number followed by an *
+# %f      : Show current window flags
+# %t      : Show current window title
+#  : Space character
+# %{-}    : Undo last color change
+# %+w     : Show remaining window numbers and names
+# %=      : Pad the remaining space in terminal width
+# %{= dd} : Restore default colors
+
+## An attribute/color modifier is is used to change the attributes or the color 
+## settings. Its format is ‘[attribute modifier] [color description]’. The 
+## attribute modifier must be prefixed by a change type indicator if it can be 
+## confused with a color description. The following change types are known:
+
+# +    add the specified set to the current attributes
+# -    remove the set from the current attributes
+# !    invert the set in the current attributes
+# =    change the current attributes to the specified set 
+
+## The attribute set can either be specified as a hexadecimal number or a 
+## combination of the following letters:
+
+# d    dim
+# u    underline
+# b    bold
+# r    reverse
+# s    standout
+# B    blinking 
+
+## Colors are coded either as a hexadecimal number or two letters specifying the 
+## desired background and foreground color (in that order). The following colors 
+## are known:
+
+# k    black
+# r    red
+# g    green
+# y    yellow
+# b    blue
+# m    magenta
+# c    cyan
+# w    white
+# d    default color
+# .    leave color unchanged 
